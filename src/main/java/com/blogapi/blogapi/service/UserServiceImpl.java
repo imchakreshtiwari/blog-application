@@ -69,10 +69,10 @@ public class UserServiceImpl implements UserService{
 
         Sort multiSort = emailSort.and(nameSort);
 
-        List<EmployeeEntity> result = userRepository.findAll(multiSort);
+//        List<User> result = userRepository.findAll(multiSort);
 
         //Slice<User> result = userRepository.findByEmail("abcd@gmail.com", paging);
-        return result.getContent();
+        return pagingUser.getContent();
     }
 
     User dtoToEntity(UserDto userDto){
